@@ -1,0 +1,581 @@
+.restaurantPage {
+  min-height: 100vh;
+  background: #f9fafb;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #111827;
+}
+
+.nav {
+  height: 64px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brandIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #16a34a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.brandText {
+  font-weight: 900;
+}
+
+.navLinks {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.navTab {
+  border: none;
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.navTab.active {
+  background: rgba(22, 163, 74, 0.12);
+  color: #16a34a;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.placeName {
+  color: #111827;
+  font-weight: 700;
+}
+
+.logout {
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.pageSub {
+  margin: 6px 0 0 0;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.newBtn {
+  background: #059669;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 18px 0 20px 0;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.06);
+}
+
+.statNumber {
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.statLabel {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.postingList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.postingCard {
+  background: white;
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.06);
+}
+
+.postingTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.postingTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.postingTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.postingDesc {
+  margin: 10px 0 12px 0;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.editBtn {
+  border: 1px solid #e5e7eb;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+  color: #374151;
+}
+
+.delBtn {
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  background: white;
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 900;
+  color: #ef4444;
+}
+
+.pill {
+  font-size: 12px;
+  font-weight: 900;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.pillGreen {
+  background: rgba(22, 163, 74, 0.12);
+  color: #16a34a;
+  border-color: rgba(22, 163, 74, 0.2);
+}
+
+.pillGray {
+  background: rgba(107, 114, 128, 0.12);
+  color: #6b7280;
+  border-color: rgba(107, 114, 128, 0.2);
+}
+
+.pillYellow {
+  background: rgba(245, 158, 11, 0.16);
+  color: #b45309;
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.placeholderCard {
+  background: white;
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 999;
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.modalClose {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.modalBody {
+  padding: 16px;
+}
+
+.fieldLabel {
+  display: block;
+  font-weight: 900;
+  font-size: 13px;
+  margin: 10px 0 6px 0;
+  color: #111827;
+}
+
+.fieldInput {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.fieldTextarea {
+  width: 100%;
+  min-height: 88px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  resize: vertical;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.saveBtn {
+  width: 100%;
+  margin-top: 16px;
+  background: #059669;
+  color: white;
+  border: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}
+
+.claimsWrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.claimsTitle {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+  margin: 20px 0 16px 0;
+}
+
+.claimsToggle {
+  margin: 0 auto 20px auto;
+  width: fit-content;
+  background: white;
+  border: 1px solid #eef2f7;
+  border-radius: 14px;
+  padding: 6px;
+  display: flex;
+  gap: 6px;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.06);
+}
+
+.toggleBtn {
+  border: none;
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+  color: #6b7280;
+}
+
+.toggleBtn.active {
+  background: rgba(22, 163, 74, 0.12);
+  color: #16a34a;
+}
+
+.claimsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.claimCard {
+  background: white;
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.06);
+}
+
+.claimTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.claimItem {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 2px;
+}
+
+.claimBy {
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.claimInfoRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: #374151;
+  font-weight: 700;
+}
+
+.claimLabel {
+  color: #6b7280;
+  font-weight: 800;
+}
+
+.claimRedeemed {
+  margin-top: 8px;
+  color: #374151;
+  font-weight: 700;
+}
+
+.claimPill {
+  font-size: 12px;
+  font-weight: 900;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.pillBlue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+  border-color: rgba(59, 130, 246, 0.18);
+}
+
+.qrWrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.qrTitle {
+  font-size: 34px;
+  font-weight: 900;
+  margin: 18px 0 8px 0;
+}
+
+.qrSub {
+  margin: 0 0 18px 0;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.qrCard {
+  background: white;
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.06);
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.qrCardTitle {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.qrCardSub {
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+
+.qrBigBtn {
+  width: 100%;
+  background: #059669;
+  color: white;
+  border: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.qrRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.qrInput {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.qrLookupBtn {
+  background: rgba(22, 163, 74, 0.18);
+  color: #16a34a;
+  border: 1px solid rgba(22, 163, 74, 0.25);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.qrLast {
+  margin-top: 12px;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.qrMono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #111827;
+}
+
+.cameraModal {
+  width: 100%;
+  max-width: 640px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.cameraBody {
+  padding: 16px;
+}
+
+.qrReader {
+  width: 100%;
+}
+
+#qr-reader button {
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+}
+
+.cameraHint {
+  margin: 12px 0 0 0;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 13px;
+}

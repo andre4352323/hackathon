@@ -1,0 +1,269 @@
+.claimsPage {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  color: #111827;
+}
+
+/* Navbar (same as your student browse page) */
+.nav {
+  height: 64px;
+  border-bottom: 1px solid #eef2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: #ffffff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #16a34a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.brandText {
+  font-weight: 700;
+}
+
+.navLinks {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.navLink.active {
+  background: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.bell {
+  position: relative;
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+
+.badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 18px;
+  height: 18px;
+  background: #ef4444;
+  color: white;
+  border-radius: 999px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email {
+  color: #374151;
+  font-weight: 600;
+}
+
+.logout {
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* Page content */
+.container {
+  padding: 34px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 0 0 18px 0;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  background: #f3f4f6;
+  padding: 6px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.tabBtn {
+  border: 0;
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.tabActive {
+  background: #ffffff;
+  color: #16a34a;
+  box-shadow: 0 6px 14px rgba(17, 24, 39, 0.08);
+}
+
+/* List */
+.list {
+  width: 980px;
+  max-width: 95vw;
+}
+
+.empty {
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+  padding: 22px;
+  color: #6b7280;
+  background: #ffffff;
+  text-align: center;
+}
+
+/* Card */
+.claimCard {
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.06);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.cardSub {
+  margin-top: 4px;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.pill {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* Body layout */
+.cardBody {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.leftInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rightInfo {
+  color: #6b7280;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.label {
+  color: #6b7280;
+  font-weight: 800;
+}
+
+.value {
+  color: #374151;
+  font-weight: 800;
+}
+
+.valueBold {
+  color: #111827;
+  font-weight: 900;
+}
+
+/* Cancel button */
+.cancelBtn {
+  margin-top: 6px;
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #ef4444;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .navLinks {
+    display: none;
+  }
+  .cardBody {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rightInfo {
+    white-space: normal;
+  }
+}
